@@ -15,8 +15,12 @@ module.exports = generators.Base.extend({
     mkdirp(appDir + '/scripts');
     mkdirp(appDir + '/img');
     mkdirp(appDir + '/css');
+  
 
-    this.fs.copy(sourceRoot + '/index.html', appDir + '/index.html');
+    this.fs.copy(sourceRoot + '/scripts/main.js', appDir + '/scripts/main.js');
+    this.fs.copy(sourceRoot + '/css/main.css', appDir + '/css/main.css');
+    this.fs.copy(sourceRoot + '/css/reset.css', appDir + '/css/reset.css');
+
     this.fs.copy(sourceRoot + '/humans.txt', appDir + '/humans.txt');
     this.fs.copy(sourceRoot + '/robots.txt', appDir + '/robots.txt');
     this.fs.copy(sourceRoot + '/bower.json', destRoot + '/bower.json');
