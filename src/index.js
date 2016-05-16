@@ -21,6 +21,9 @@ module.exports = generators.Base.extend({
     this.fs.copy(sourceRoot + '/css/main.css', appDir + '/css/main.css');
     this.fs.copy(sourceRoot + '/css/reset.css', appDir + '/css/reset.css');
 
+
+    this.fs.copy(sourceRoot + '/index.html', appDir + '/index.html');
+    
     this.fs.copy(sourceRoot + '/humans.txt', appDir + '/humans.txt');
     this.fs.copy(sourceRoot + '/robots.txt', appDir + '/robots.txt');
     this.fs.copy(sourceRoot + '/bower.json', destRoot + '/bower.json');
