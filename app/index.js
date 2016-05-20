@@ -11,7 +11,7 @@ module.exports = generators.Base.extend({
     var destRoot = this.destinationRoot(),
         sourceRoot = this.sourceRoot(),
         appDir = destRoot + '/app',
-        sassFileExtension = (this.sass) ? '.sass' : 'scss',
+        sassFileExtension = (this.sass) ? '.scss' : '.sass',
         templateContext = {
           appname : this.appname,
           appdescription : this.appdescription,
@@ -21,8 +21,9 @@ module.exports = generators.Base.extend({
 
 
     mkdirp(appDir + '/scripts');
-    mkdirp(appDir + '/img');
     mkdirp(appDir + '/sass');
+    mkdirp(appDir + '/pug');
+    mkdirp(appDir + '/dist/img');
 
 
 
@@ -35,11 +36,17 @@ module.exports = generators.Base.extend({
     this.fs.copy(sourceRoot + '/sass/_helpers' + sassFileExtension, appDir + '/sass/_helpers' + sassFileExtension);
     this.fs.copy(sourceRoot + '/sass/_reset' + sassFileExtension, appDir + '/sass/_reset' + sassFileExtension);
     this.fs.copy(sourceRoot + '/sass/_variables' + sassFileExtension, appDir + '/sass/_variables' + sassFileExtension);
+    this.fs.copy(sourceRoot + '/sass/_nav' + sassFileExtension, appDir + '/sass/_nav' + sassFileExtension);
     this.fs.copy(sourceRoot + '/sass/main' + sassFileExtension, appDir + '/sass/main' + sassFileExtension);
 
 
+
     //Index File
-    this.fs.copy(sourceRoot + '/index.html', appDir + '/index.html');
+    // this.fs.copyTpl(sourceRoot + '/index.html', appDir + '/index.html', templateContext);
+    this.fs.copy(sourceRoot + '/pug/index.pug', appDir + '/pug/index.pug');
+    this.fs.copyTpl(sourceRoot + '/pug/head.pug', appDir + '/pug/head.pug', templateContext);
+    this.fs.copy(sourceRoot + '/pug/nav.pug', appDir + '/pug/nav.pug');
+    this.fs.copy(sourceRoot + '/pug/footer.pug', appDir + '/pug/footer.pug');
 
     //Gulpfile
     this.fs.copyTpl(sourceRoot + '/gulpfile.js', destRoot + '/gulpfile.js');
@@ -60,7 +67,7 @@ module.exports = generators.Base.extend({
       {
         name    : 'name',
         message : 'What is your project name?',
-        default : this.appname
+        default : ''
       },
       {
         name    : 'description',
@@ -92,7 +99,10 @@ module.exports = generators.Base.extend({
 
   constructor: function() {
     generators.Base.apply(this, arguments);
-    this.argument('sass');
+    this.argument('scss', {
+      required: false,
+      desc: "Use SCSS syntax insted of SASS"
+    });
   },
 
   initializing: function() {
@@ -118,8 +128,8 @@ module.exports = generators.Base.extend({
   install: function() {
     // this.bowerInstall();
     this.npmInstall();
-    this.on('end', function() {
-      this.spawnCommand('gulp');
-    });
+    // this.on('end', function() {
+    //   this.spawnCommand('gulp');
+    // });
   }
 });

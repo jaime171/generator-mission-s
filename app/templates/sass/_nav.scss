@@ -1,0 +1,54 @@
+.logo {
+  display: inline-block;
+  padding: 10px;
+}
+.menu{
+  float  : right;
+  padding: 15px;
+}
+
+.lines{
+  display         : block;
+  background-color: black;
+  height          : 4px;
+  width           : 28px;
+  margin-top      : 5px;
+}
+
+header{
+  background: $main-color;
+  // position: fixed
+  width: 100%;
+  img {
+    padding: 10px;
+  }
+  nav {
+    display: none;
+    float  : right;
+    padding: 10px;
+  }
+  ul {
+    padding: 10px;
+  }
+  li {
+    cursor      : pointer;
+    display     : inline-block;
+    font-size   : .9em;
+    margin-right: 25px;
+    padding     : 2px;
+  }
+    &:hover {
+      color: lightcoral;
+    }
+}
+
+@media screen and (min-width: $medium-devices){
+  .menu{
+    display: none;
+  }
+  header{
+    nav{
+      display: block;
+    }
+  }
+}
