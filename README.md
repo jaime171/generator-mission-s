@@ -71,8 +71,8 @@ Once everything is installed, you will see a project structure like this:
 
 ## Use
 
-Run `gulp` to build all your pug and sass files, and also it will open a local server
+Run `gulp` to build all your pug and sass files, and also it will open a local server.
 
 ## Arguments
 
-`yo mission-s scss` Use SCSS syntax insted of SASS
+`yo mission-s scss` Use SCSS syntax insted of SASS.
