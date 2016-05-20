@@ -13,6 +13,7 @@ A generator for creating static sites. Using tools like: [Pug](http://jade-lang.
 - [Features](#features)
 - [Getting Started](#getting-started)
 - [Setup](#setup)
+- [Use](#use)
 - [Arguments](#arguments)
 
 
@@ -36,7 +37,7 @@ Check to see if you have Node installed, type `node -v`. if you don't have insta
 To start a new project, you need to open up a terminal/command prompt, make a new directory, and navigate into it.
 
 ```
-mkdir my-new-project 
+mkdir my-new-project
 cd my-new-project
 ```
 
@@ -53,11 +54,11 @@ Once everything is installed, you will see a project structure like this:
 |   ├── dist                     # Folder for production build output
 |   |   ├── css                    # Compiled css
 |   |   ├── img                    # All your img
-|   |   └── index.html             # Compiled pug 
+|   |   └── index.html             # Compiled pug
 |   ├── pug                      # Pug modules
 |   ├── sass                     # Sass modules
 |   └── scripts                  # JS scripts
-├── .bowerrc 
+├── .bowerrc
 ├── .editorconfig
 ├── .jshintrc
 ├── .yo-rc.json
@@ -68,7 +69,10 @@ Once everything is installed, you will see a project structure like this:
 ```
 
 
+## Use
+
+Run `gulp` to build all your pug and sass files, and also it will open a local server
+
 ## Arguments
 
 `yo mission-s scss` Use SCSS syntax insted of SASS
-
