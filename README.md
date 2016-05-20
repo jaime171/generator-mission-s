@@ -50,36 +50,21 @@ Once everything is installed, you will see a project structure like this:
 
 ```
 ├── app/                       # Folder for all the source files
-|   ├── dist                 
-|   ├── pug
-|   ├── sass
-|   ├── scripts
-|   ├── scripts
-
-
-├── node_modules/              # Folder for all node modules
-├── src
-|   ├── _data                  # JSON/YAML files that add data to templates
-|   ├── _images                # Images
-|   ├── _layouts               # Layout structure for app
-|   |   └── base.jade
-|   ├── _modules               # Reusable modules
-|   |   └── link
-|   |       ├── __tests__
-|   |       |   └── link.spec.js
-|   |       ├── link.jade
-|   |       ├── link.js
-|   |       └── link.scss
-|   ├── _styles               # Global styles, mixins, variables, etc
-|   |   └── main.scss         # Main stylesheet (import everything to this file)
-|   ├── _scripts              # Global scripts, base classes, etc
-|   |   └── main.js           # Main bootstrap file
-|   ├── fonts                 # Fonts (Example, will not be generated)
-|   ├── index.jade            # Homepage template
-|   ├── favicon.ico
-|   └── robots.txt
-├── gulpfile.js               # Gulp task configuration
-└── package.json              # Dependencies and site/folder configuration
+|   ├── dist                     # Folder for production build output
+|   |   ├── css                    # Compiled css
+|   |   ├── img                    # All your img
+|   |   └── index.html             # Compiled pug 
+|   ├── pug                      # Pug modules
+|   ├── sass                     # Sass modules
+|   └── scripts                  # JS scripts
+├── .bowerrc 
+├── .editorconfig
+├── .jshintrc
+├── .yo-rc.json
+├── bower.json                 # Dependencies configuration
+├── gulpfile.js                # Gulp task configuration
+├── package.json               # DevDependencies and site/folder configuration
+└── README.md                  # Readme file
 ```
 
 
