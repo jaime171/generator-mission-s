@@ -52,7 +52,10 @@ Once everything is installed, you will see a project structure like this:
 ├── app/                       # Folder for all the source files
 |   ├── dist                 
 |   ├── pug
-|   ├── pug
+|   ├── sass
+|   ├── scripts
+|   ├── scripts
+
 
 ├── node_modules/              # Folder for all node modules
 ├── src
