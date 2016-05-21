@@ -28,7 +28,7 @@ module.exports = generators.Base.extend({
 
 
     // Script files
-    this.fs.copy(sourceRoot + '/scripts/main.js', appDir + '/scripts/main.js');
+    this.fs.copy(sourceRoot + '/dist/scripts/main.js', appDir + '/dist/scripts/main.js');
 
 
 
@@ -67,7 +67,7 @@ module.exports = generators.Base.extend({
       {
         name    : 'name',
         message : 'What is your project name?',
-        default : ''
+        default : this.appname
       },
       {
         name    : 'description',

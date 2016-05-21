@@ -4,6 +4,7 @@ var gulp = require('gulp'),
   browserSync = require('browser-sync').create(),
   pug = require("gulp-pug"),
   plumber = require("gulp-plumber");
+  watch = require("gulp-watch");
 
 
 
@@ -15,16 +16,6 @@ gulp.task('styles', function(){
     .pipe(browserSync.reload({stream: true}));
 });
 
-gulp.task('serve', function() {
-  browserSync.init({
-    server: {
-      baseDir: './app/dist'
-    }
-  });
-  gulp.watch('./app/sass/*.sass', ['styles']);
-  gulp.watch('./app/pug/*.pug', ['views']);
-  gulp.watch('./app/dist/*.html').on('change', browserSync.reload);
-});
 
 gulp.task('views', function buildHTML() {
   return gulp.src('./app/pug/index.pug')
@@ -36,4 +27,26 @@ gulp.task('views', function buildHTML() {
   .pipe(browserSync.reload({stream: true}));
 });
 
-gulp.task('default', ['styles', 'views', 'serve']);
+
+gulp.task('build-js', function(){
+  return gulp.src('./app/dist/scripts/*.js')
+    .pipe(watch('./app/dist/scripts/*.js'))
+    .pipe(browserSync.reload({stream: true}));
+});
+
+
+gulp.task('serve', function() {
+  browserSync.init({
+    server: {
+      baseDir: './app/dist'
+    }
+  });
+  gulp.watch('./app/sass/*.sass', ['styles']);
+  gulp.watch('./app/pug/*.pug', ['views']);
+  gulp.watch('./app/dist/scripts/*.js', ['build-js']);
+  gulp.watch('./app/dist/*.html').on('change', browserSync.reload);
+});
+
+
+
+gulp.task('default', ['styles', 'views', 'build-js', 'serve']);

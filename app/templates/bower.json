@@ -10,13 +10,6 @@
   "license": "",
   "homepage": "<%= appwebsite %>",
   "private": true,
-  "ignore": [
-    "**/.*",
-    "node_modules",
-    "bower_components",
-    "test",
-    "tests"
-  ],
   "dependencies": {
     "jQuery": "~2.2.0"
   }
