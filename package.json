@@ -1,6 +1,6 @@
 {
   "name": "generator-mission-s",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "A generator for creating static websites. Using gulp, pug and sass",
   "author" : "Jaime Simental",
   "email" : "simental@insidethebuffalo.com",

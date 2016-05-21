@@ -51,13 +51,17 @@ Once everything is installed, you will see a project structure like this:
 
 ```
 ├── app/                       # Folder for all the source files
-|   ├── dist                     # Folder for production build output
+|   ├── dist                     # Folder for production build
 |   |   ├── css                    # Compiled css
 |   |   ├── img                    # All your img
+|   |   ├── scripts                # JS scripts
+|   |   ├── favicon
+|   |   ├── humans.txt
+|   |   ├── robots.txt
 |   |   └── index.html             # Compiled pug
 |   ├── pug                      # Pug modules
-|   ├── sass                     # Sass modules
-|   └── scripts                  # JS scripts
+|   └── sass                     # Sass modules
+|                   
 ├── .bowerrc
 ├── .editorconfig
 ├── .jshintrc

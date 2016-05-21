@@ -20,12 +20,14 @@ module.exports = generators.Base.extend({
         };
 
 
-    mkdirp(appDir + '/scripts');
     mkdirp(appDir + '/sass');
     mkdirp(appDir + '/pug');
     mkdirp(appDir + '/dist/img');
 
 
+
+    //Favicon
+    this.fs.copy(sourceRoot + '/favicon.ico', appDir + '/dist/favicon.ico');
 
     // Script files
     this.fs.copy(sourceRoot + '/dist/scripts/main.js', appDir + '/dist/scripts/main.js');
@@ -58,7 +60,6 @@ module.exports = generators.Base.extend({
     this.fs.copyTpl(sourceRoot + '/bower.json', destRoot + '/bower.json', templateContext);
     this.fs.copy(sourceRoot + '/README.md', destRoot + '/README.md');
     this.fs.copy(sourceRoot + '/.editorconfig', destRoot + '/.editorconfig');
-    this.fs.copy(sourceRoot + '/.jshintrc', destRoot + '/.jshintrc');
     this.fs.copy(sourceRoot + '/.bowerrc', destRoot + '/.bowerrc');
     this.fs.copyTpl(sourceRoot + '/package.json', destRoot + '/package.json', templateContext);
   },
