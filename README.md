@@ -51,11 +51,8 @@ Once everything is installed, you will see a project structure like this:
 
 ```
 ├── app/                       # Folder for all the source files
-<<<<<<< HEAD
 |   ├── dist                     # Folder for production build
-=======
-|   ├── dist                     # Folder for production build 
->>>>>>> d874f6c410f6d1e40593d3e4b08f241de5f10621
+|   ├── dist                     # Folder for production build
 |   |   ├── css                    # Compiled css
 |   |   ├── img                    # All your img
 |   |   ├── scripts                # JS scripts
