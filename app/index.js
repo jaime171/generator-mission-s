@@ -41,10 +41,8 @@ module.exports = generators.Base.extend({
 
 
 
-    //Index File
-    // this.fs.copyTpl(sourceRoot + '/index.html', appDir + '/index.html', templateContext);
     this.fs.copy(sourceRoot + '/pug/index.pug', appDir + '/pug/index.pug');
-    this.fs.copyTpl(sourceRoot + '/pug/head.pug', appDir + '/pug/head.pug', templateContext);
+    this.fs.copyTpl(sourceRoot + '/pug/base.pug', appDir + '/pug/base.pug', templateContext);
     this.fs.copy(sourceRoot + '/pug/nav.pug', appDir + '/pug/nav.pug');
     this.fs.copy(sourceRoot + '/pug/footer.pug', appDir + '/pug/footer.pug');
 
@@ -53,8 +51,10 @@ module.exports = generators.Base.extend({
 
 
 
-    this.fs.copyTpl(sourceRoot + '/humans.txt', appDir + '/humans.txt', templateContext);
-    this.fs.copy(sourceRoot + '/robots.txt', appDir + '/robots.txt');
+    this.fs.copyTpl(sourceRoot + '/humans.txt', appDir + '/dist/humans.txt', templateContext);
+    this.fs.copy(sourceRoot + '/robots.txt', appDir + '/dist/robots.txt');
+
+
     this.fs.copyTpl(sourceRoot + '/bower.json', destRoot + '/bower.json', templateContext);
     this.fs.copy(sourceRoot + '/README.md', destRoot + '/README.md');
     this.fs.copy(sourceRoot + '/.editorconfig', destRoot + '/.editorconfig');
@@ -126,10 +126,7 @@ module.exports = generators.Base.extend({
     this._createProjectFileSystem();
   },
   install: function() {
-    // this.bowerInstall();
+    this.bowerInstall();
     this.npmInstall();
-    // this.on('end', function() {
-    //   this.spawnCommand('gulp');
-    // });
   }
 });

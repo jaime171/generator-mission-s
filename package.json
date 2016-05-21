@@ -1,14 +1,26 @@
 {
   "name": "generator-mission-s",
-  "version": "1.0.1",
-  "description": "Yeoman generator for static websites",
+  "version": "1.0.5",
+  "description": "A generator for creating static websites. Using gulp, pug and sass",
+  "author" : "Jaime Simental",
+  "email" : "simental@insidethebuffalo.com",
+  "url" : "http://missionjimmy.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jaime171/generator-mission-s"
+  },
   "files": [
     "app"
   ],
   "keywords": [
     "yeoman-generator",
     "static website",
-    "static"
+    "static",
+    "gulp",
+    "sass",
+    "pug",
+    "jade",
+    "yeoman"
   ],
   "dependencies": {
     "mkdirp": "^0.5.1",
