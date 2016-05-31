@@ -20,7 +20,7 @@ A generator for creating static sites using tools like [Pug](http://jade-lang.co
 ## Features
 
 - Preview with [Browsersync](https://www.browsersync.io/)
-- Automated build process: compliation of preprocessors (Pug and Sass)
+- Automated build process: compilation of preprocessors (Pug and Sass)
 
 
 ## Getting Started
