@@ -19,7 +19,7 @@ A generator for creating static sites. Using tools like: [Pug](http://jade-lang.
 
 ## Features
 
-- Previe with [Browsersync](https://www.browsersync.io/)
+- Preview with [Browsersync](https://www.browsersync.io/)
 - Automated build process: copliation of preprocessors(Pug and Sass)
 
 
@@ -29,7 +29,7 @@ This generator utilizes [Yeoman](http://yeoman.io/), [Gulp](http://gulpjs.com/) 
 
 #### Node.js
 
-Check to see if you have Node installed, type `node -v`. if you don't have installed, navigate to [Node.js](https://nodejs.org/en/) website and isntall from there.
+Check to see if you have Node installed, type `node -v`. if you don't have installed, navigate to [Node.js](https://nodejs.org/en/) website and install from there.
 
 
 ## Setup
@@ -51,11 +51,7 @@ Once everything is installed, you will see a project structure like this:
 
 ```
 ├── app/                       # Folder for all the source files
-<<<<<<< HEAD
 |   ├── dist                     # Folder for production build
-=======
-|   ├── dist                     # Folder for production build 
->>>>>>> d874f6c410f6d1e40593d3e4b08f241de5f10621
 |   |   ├── css                    # Compiled css
 |   |   ├── img                    # All your img
 |   |   ├── scripts                # JS scripts
@@ -83,4 +79,4 @@ Run `gulp` to build all your pug and sass files, and also it will open a local s
 
 ## Arguments
 
-`yo mission-s scss` Use SCSS syntax insted of SASS.
+`yo mission-s scss` Use SCSS syntax instead of SASS.
