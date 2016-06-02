@@ -6,7 +6,7 @@
 # Yeoman Mission-s Generator
 
 
-A generator for creating static sites. Using tools like: [Pug](http://jade-lang.com/) and [Sass](http://sass-lang.com/).
+A generator for creating static sites using tools like [Pug](http://jade-lang.com/) and [Sass](http://sass-lang.com/).
 
 #Table of Contents
 
@@ -20,7 +20,11 @@ A generator for creating static sites. Using tools like: [Pug](http://jade-lang.
 ## Features
 
 - Preview with [Browsersync](https://www.browsersync.io/)
+<<<<<<< HEAD
 - Automated build process: copliation of preprocessors(Pug and Sass)
+=======
+- Automated build process: compilation of preprocessors (Pug and Sass)
+>>>>>>> 8e28d099d167b458f83b381ba820d855358694c9
 
 
 ## Getting Started
@@ -41,7 +45,7 @@ mkdir my-new-project
 cd my-new-project
 ```
 
-the, run Mission-s generator.
+then, run Mission-s generator.
 
 ```
 yo mission-s
