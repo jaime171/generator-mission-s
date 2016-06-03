@@ -58,7 +58,6 @@ module.exports = generators.Base.extend({
 
 
     this.fs.copyTpl(sourceRoot + '/bower.json', destRoot + '/bower.json', templateContext);
-    this.fs.copy(sourceRoot + '/README.md', destRoot + '/README.md');
     this.fs.copy(sourceRoot + '/.editorconfig', destRoot + '/.editorconfig');
     this.fs.copy(sourceRoot + '/.bowerrc', destRoot + '/.bowerrc');
     this.fs.copyTpl(sourceRoot + '/package.json', destRoot + '/package.json', templateContext);
