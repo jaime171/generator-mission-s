@@ -58,6 +58,12 @@ gulp.task('js-min', function(){
     .pipe(gulp.dest(src + 'app/dist/scripts'));
 });
 
+gulp.task('css-min', function(){
+  gulp.src(src + 'app/dist/css/*.css')
+    .pipe(cssnano())
+    .pipe(gulp.dest(src + 'app/dist/css'));
+});
+
 gulp.task('default', ['styles', 'views', 'js-watch', 'serve']);
 
-gulp.task('build', ['image-min', 'js-min']);
+gulp.task('build', ['image-min', 'js-min', 'css-min']);
