@@ -78,6 +78,16 @@ Once everything is installed, you will see a project structure like this:
 
 Run `gulp` to build all your pug and sass files, and also it will open a local server.
 
+
+## Build
+
+Run `gulp build` to minify and compress all your css, js and images.
+
+
 ## Arguments
 
 `yo mission-s scss` Use SCSS syntax instead of SASS.
+
+## License
+
+MIT © [Jaime Simental](http://missionjimmy.com/)
