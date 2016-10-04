@@ -61,8 +61,6 @@ module.exports = generators.Base.extend({
     this.fs.copy(sourceRoot + '/.editorconfig', destRoot + '/.editorconfig');
     this.fs.copyTpl(sourceRoot + '/package.json', destRoot + '/package.json', templateContext);
 
-
-    this.fs.copy(sourceRoot + '/.gitignore', destRoot + '/.gitignore');
   },
   _getPrompts: function() {
     var prompts = [
