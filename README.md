@@ -90,4 +90,4 @@ Run `gulp build` to minify and compress all your css, js and images.
 
 ## License
 
-MIT © [Jaime Simental](http://missionjimmy.com/)
+MIT © [Jaime Simental](http://themissionjimmy.com/)
