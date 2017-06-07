@@ -1,6 +1,6 @@
 
 <p align="center">
-  <img src="http://missionjimmy.com/images/logo-v2.svg" height="200">
+  <img src="http://themissionjimmy.com/img/logo-header-night.svg" height="200">
 </p>
 
 # Yeoman Mission-s Generator
